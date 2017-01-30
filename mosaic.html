@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Mosaic</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Create a Mosaic of your photo">
+    <meta name="author" content="Anshul Nema">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+    <h1 align="center">
+        Create a Mosaic of your photo
+    </h1>
+    <section id="drop-target">
+        <div class="box">
+            <div class="box__inner initial">
+                <div class="panel panel-status">
+                    <div class="panel__inner">
+                        <p class="state state--initial">
+                            Drop your photo here!
+                            <span class="state__choose">
+                                <label for="image-input" class="box-link">
+                                    Choose file
+                                    <input id="image-input" type="file" name="button-file" accept="image/*">
+                                </label>
+                            </span>
+                        </p>
+                        <p class="state state--loading">
+                            Loading...
+                        </p>
+                        <p class="state state--processing">
+                            Generating...
+                        </p>
+                        <p class="state state--error">
+                            Canvas not supported. Please install a HTML5 compatible browser.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="result-message"></div>
+    </section>
+    <section class="results">
+        <h2 align="center">
+            Results
+        </h2>
+        <div id="canvas-results"></div>
+    </section>
+    <script type="text/javascript" src="js/mosaic.js"></script>
+    <script type="text/javascript" src="js/photo-mosaic.js"></script>
+    <script type="text/javascript" src="js/client.js"></script>
+</body>
+
+</html>
