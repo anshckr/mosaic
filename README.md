@@ -35,7 +35,7 @@ $ git clone https://github.com/anshckr/mosaic
 
 ### Prerequisites
 
-[NodeJs](https://nodejs.org/en/download/) is a must to run this project
+* [NodeJs][1] is a must to run this project
 
 ### Running
 ##### Dev Environment
@@ -46,6 +46,21 @@ To get the project running -
 
 Then, open on your browser: http://localhost:8765/
 
+## Code Conventions and Guidelines
+
+* Javascript
+  * Summary:
+    * indentation should be of 4 space char
+  * [Comprehensive code conventions and guidelines][4]
+* CSS
+  * [BEM - CSS Class Naming Conventions][2]
+  * [General CSS Conventions][3]
+* HTML - 4 spaces
+
 ## Authors
 
 * **Anshul Nema** - [anshckr](https://github.com/anshckr)
+
+[1]: https://nodejs.org/en/download/
+[2]: https://github.com/airbnb/css
+[3]: http://getbem.com/

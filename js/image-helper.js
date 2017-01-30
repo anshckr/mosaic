@@ -37,11 +37,11 @@ var ImageHelper = (function () {
      */
     function convertRgbToHex(r, g, b) {
         return '#' +   // return a number sign, plus
-        (// a number calculated by using
-          b |          // blue as is,
-          g << 8 |     // green shifted up two digits,
-          r << 16 |    // red shifted up four digits,
-          1 << 24      // and 1 shifted up six digits,
+        (   // a number calculated by using
+            b |          // blue as is,
+            g << 8 |     // green shifted up two digits,
+            r << 16 |    // red shifted up four digits,
+            1 << 24      // and 1 shifted up six digits,
         )
         .toString(16)  // then serialize to a hex string, and
         .slice(1);      // remove the 1 to get the number with 0s intact.

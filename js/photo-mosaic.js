@@ -52,7 +52,7 @@ var PhotoMosaic = (function () {
             context = canvas.getContext('2d');
 
             // call function to composite the tiles results into a photomosaic of the original image
-            var photomosaic = new Mosaic(resizedImage, TILE_WIDTH, TILE_HEIGHT);
+            var photomosaic = new Mosaic(resizedImage);
             photomosaic.build().then(function (result) {
                 var tile, end;
 
@@ -68,15 +68,20 @@ var PhotoMosaic = (function () {
         return promise;
     }
 
-    function Mosaic(image, width, height) {
+    /**
+     * Helper class to generate the mosaic
+     *
+     * @class      Mosaic (name)
+     * @param      {<type>}                  image   The image element
+     */
+    function Mosaic(image) {
         var _originalImage = image,
-        _tileWidth = width,
-        _tileHeight = height,
+        _tileWidth = TILE_WIDTH,
+        _tileHeight = TILE_HEIGHT,
         _workersPool = [],
         _workersCount = 4,
         _index = 0,
         _handlers = [];
-
 
         function launchWorkers() {
             // Launching every worker
